@@ -21,27 +21,28 @@ const Currency = () => {
    const styles = {
 	   cover: {
 			backgroundColor: "lightgreen",
-			color: "white",		
+			color: "white !important",		
 	   },
 	   label: {
-		   color: "white"
+		   color: "white !important"
 	   },
 	   selected: {
 		   backgroundColor: "lightgreen",
 		   border: "0rem",
+           color: "white"
 	   },
 	   option: {
 		   backgroundColor: "lightgreen",
-		   color: "white",
-            "&:checked, &:hover":{
-                backgroundColor: "white",
+		   color: "black",
+            "option:checked, option:hover":{
+                backgroundColor: "white !important",
                 color: "black",
             },
          },
    }
     return (
-		<div className='alert alert-success' style={styles.cover }>
-		<label className="text-success" style={ styles.label } htmlFor="currency">Currency </label>
+		<div className='alert alert-success' style={{backgroundColor:"lightgreen",color: "white" }}>
+		<label className="" style={{backgroundColor:"lightgreen", color:"white"} } htmlFor="currency">Currency </label>
 		<select className="currency_style" id="currency" onChange={handleCurrencyChange} style={ styles.selected } >
 		    <option value="$" name="$" selected={options.dollar === newCurrency} style={ styles.option }>$ Dollar</option>
 		    <option value="£" name="£" selected={options.pound === newCurrency} style={ styles.option }>£ Pound</option>
